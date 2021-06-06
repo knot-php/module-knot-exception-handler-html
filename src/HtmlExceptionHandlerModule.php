@@ -5,7 +5,7 @@ namespace knotphp\module\knotexceptionhandler\html;
 
 use Throwable;
 
-use knotlib\exceptionhandler\html\DebugtraceRenderer\HtmlDebugtraceRenderer;
+use knotlib\exceptionhandler\html\debugtracerenderer\HtmlDebugtraceRenderer;
 use knotlib\exceptionhandler\text\TextExceptionHandler;
 use knotlib\kernel\eventstream\Channels;
 use knotlib\kernel\eventstream\Events;
