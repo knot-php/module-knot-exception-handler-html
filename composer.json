@@ -13,11 +13,11 @@
   ],
   "require": {
     "php": ">=7.2",
-    "knot-lib/exception-handler": "~0.1",
-    "knot-lib/exception-handler-html": "~0.1",
-    "knot-lib/kernel": "~0.1",
-    "knot-lib/module": "~0.1",
-    "knot-php/module-knot-exception-handler": "~0.1"
+    "knot-lib/exception-handler": "~0.4",
+    "knot-lib/exception-handler-html": "~0.2",
+    "knot-lib/kernel": "~0.8",
+    "knot-lib/module": "~0.7",
+    "knot-php/module-knot-exception-handler": "~0.5"
   },
   "require-dev": {
     "phpunit/phpunit": "^8.5.15",
