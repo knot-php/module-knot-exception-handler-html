@@ -1,17 +1,21 @@
 <?php
 declare(strict_types=1);
 
-namespace KnotPhp\Module\KnotExceptionHandler\Html\Test;
+namespace knotphp\module\knotexceptionhandler\html\test;
 
-use KnotLib\Kernel\Exception\ModuleInstallationException;
-use KnotPhp\Module\KnotExceptionHandler\Adapter\KnotExceptionHandlerAdapter;
-use KnotPhp\Module\KnotExceptionHandler\Html\HtmlExceptionHandlerModule;
+use ReflectionClass;
+use ReflectionException;
+
 use PHPUnit\Framework\TestCase;
+
+use knotlib\kernel\Exception\ModuleInstallationException;
+use knotphp\module\knotexceptionhandler\adapter\KnotExceptionHandlerAdapter;
+use knotphp\module\knotexceptionhandler\html\HtmlExceptionHandlerModule;
 
 final class HtmlExceptionHandlerModuleTest extends TestCase
 {
     /**
-     * @throws \ReflectionException
+     * @throws ReflectionException
      */
     public function testInstall()
     {
@@ -26,7 +30,7 @@ final class HtmlExceptionHandlerModuleTest extends TestCase
             $this->fail($e->getMessage());
         }
 
-        $ref_class = new \ReflectionClass($app);
+        $ref_class = new ReflectionClass($app);
         $prop = $ref_class->getParentClass()->getParentClass()->getProperty('ex_handlers');
         $prop->setAccessible(true);
         $ex_handlers = $prop->getValue($app);
